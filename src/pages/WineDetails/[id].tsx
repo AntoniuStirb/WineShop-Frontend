@@ -37,7 +37,7 @@ export default function WineDetails()  {
         if (id) {
           setLoading(true);
           const response = await WineService.getWineById(BigInt(id as string));
-          const wine = response; // Assuming getWineById returns a single wine
+          const wine = response; 
           const byteCharacters = atob(wine.fileBytes);
           const byteNumbers = new Array(byteCharacters.length);
 
@@ -72,7 +72,6 @@ export default function WineDetails()  {
     }
   }, [id]);
   const handleUpdate = () => {
-    // Add logic for update functionality, e.g., redirect to the update page
     router.push(`/UpdateWine/${wineData.id}`);
   };
 
@@ -93,7 +92,7 @@ export default function WineDetails()  {
   const handleDeleteConfirmed = async () => {
     try {
       console.log('Deleting wine with ID:', deleteConfirmation.itemId);
-      await WineService.deleteWine(deleteConfirmation.itemId!); // Ensure itemId is not null
+      await WineService.deleteWine(deleteConfirmation.itemId!); 
       console.log(deleteConfirmation.itemId);
       router.push('/');
     } catch (error) {

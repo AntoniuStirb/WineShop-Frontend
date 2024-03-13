@@ -5,7 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 import SearchBar from '@/components/SearchBar';
 import Filter from '@/components/Filter';
 import Link from 'next/link';
-import { Margin } from '@mui/icons-material';
+
 
 interface HeaderProps {
   setWines: (value: React.SetStateAction<any[]>) => void;
@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ setWines }: HeaderProps) => {
 
   return (
     <AppBar position="fixed" elevation={24} style={{
-      backgroundColor: '#3E2723',  // Dark brown color
+      backgroundColor: '#3E2723',  
       boxShadow: '0px 5px 15px rgba(0, 0, 0, 1)',
     }}>
       <Toolbar>
@@ -36,9 +36,6 @@ const Header: React.FC<HeaderProps> = ({ setWines }: HeaderProps) => {
         }}>
           Wine Shop
         </Typography>
-
-        {/* Filter */}
-        
 
         {/* SearchBar */}
         <Box display="flex" alignItems="center">
