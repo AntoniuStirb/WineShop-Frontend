@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ setWines }: HeaderProps) => {
           Wine Shop
         </Typography>
 
-        {/* SearchBar */}
+   
         <Box display="flex" alignItems="center">
           <Link href="/AddWine/addWine">
             <Button variant="contained" color="primary" startIcon={<AddIcon />}> Add New Wine</Button>
